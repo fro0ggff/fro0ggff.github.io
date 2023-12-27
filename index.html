@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css">
+	<title>Bakery</title>
+</head>
+<body>
+	<header>
+		<img src="img/logo.jpg" style="width: 100px; height: 100px;">
+		<h1>BAKERY</h1>
+	</header>
+	<div class="slider-container">
+	    <div class="slider">
+	      <img src="img/1.png" width="100%" height="400px" alt="Фото зала">
+	      <img src="img/2.png" width="100%" height="400px" alt="Фото зала 2">
+	    </div>
+	    <button class="prev-button" type="button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+	    <button class="next-button" type="button" aria-label="Посмотреть следующий слайд">&gt;</button>
+	</div>
+	<div class="about">
+		<h2 style="font-size: 25px;">О НАС</h2>
+		<span>Мы - команда талантливых кондитеров, которые с любовью и страстью создают неповторимые сладости для вас. Наша цель - подарить вам незабываемые вкусовые ощущения.</span>
+	</div>
+	<div class="catalog">
+		<div class="catblock flex">
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h2>Пироги</h2></a>
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h2>Хлеб</h2></a>
+		</div>
+		<div class="catblock flex" style="margin-top: 20px;">
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h2>Торты</h2></a>
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h2>Пирожные</h2></a>
+		</div>
+	</div>
+	<div style="margin-top: 40px;" class="flex">
+		<video src="video/1.mp4" controls style="height: 600px; width: 40%;"></video>
+		<div class="benefits">
+			<h2>Почему именно мы?</h2>
+			<div class="bor"><span>
+			Мы - кондитерская, которая перевоплощает вкус в искусство!<br><br>
+			1. Исключительное качество: Мы стремимся к совершенству в каждом произведении нашего мастерства. Тщательно отбираем лучшие ингредиенты и используем только свежие продукты, чтобы достичь идеального вкуса и текстуры.<br><br>
+			2. Творческий подход: Наша команда кондитеров - настоящие мастера своего дела, которые создают уникальные и невероятно привлекательные десерты. Они непрерывно экспериментируют с новыми вкусовыми комбинациями и дизайнами, чтобы удивлять и радовать вас каждый раз.<br><br>
+			3. Персональный подход: Мы ценим каждого нашего клиента и всегда держим в уме его индивидуальные предпочтения и пожелания. Мы готовы разработать десерт специально для вас, учитывая все ваши пожелания в отношении вкуса, декора и размера.
+			</span></div>
+			<div style="margin-top: 30px;">
+		    <div class="str"></div>
+		    	<input class="input-num" type="text">
+		    	<button class="btn">Отправить</button>
+			</div>
+		</div>
+	</div>
+	<footer class="flex">
+		<span>Пн-Вс, Ежедневно с 8:00 до 23:00</span>
+		<!-- weather widget start --><a target="_blank" href="https://nochi.com/weather/saint-petersburg-18398"><img src="https://w.bookcdn.com/weather/picture/5_18398_1_20_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=70241&domid=589&anc_id=53969"  alt="booked.net"/></a><!-- weather widget end -->
+		<div class="flex">
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="img/3.jpg"></a>
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="img/4.jpg"></a>
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="img/5.jpg"></a>
+		</div>
+	</footer>
+	<script src="scripts/script.js"></script>
+	<script type="text/javascript">
+		let str = document.querySelector(".str");  // Берём элемент строки
+		let btn = document.querySelector(".btn");  // Берём элемент кнопки
+		 
+		let num1 = Math.ceil(Math.random() * 10); // Получаем рандомное число один
+		let num2 = Math.ceil(Math.random() * 10); // Получаем рандомное число два
+		let res = num1 + num2; // Результат сложение этих чисел
+		 
+		// Выводим строчку ворожения
+		str.innerHTML = `${num1} + ${num2} = `;
+		 
+		// События нажатия на кнопку
+		btn.addEventListener("click", function () {
+		    // Получаем значение из input
+		    let inputNum = document.querySelector(".input-num").value;
+		    // Переводим в числовой тип данных 
+		    inputNum = parseInt(inputNum);
+		    // Условие, если значение из input равно результат
+		    if (inputNum === res) {
+		        // То выводит в консоль "Вход разрешён"
+		        alert("Вход разрешён");
+		    } else {
+		        // Иначе выводит "Вход запрещен"
+		        alert("Вход запрещен");
+		    }
+		            
+		});
+	</script>
+</body>
+</html>

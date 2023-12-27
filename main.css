@@ -1,0 +1,121 @@
+body{
+	margin: 1em 5em 0em 5em;
+	background: rgb(255,211,117);
+  background: linear-gradient(0deg, rgba(255,211,117,1) 0%, rgba(255,251,207,1) 100%);
+	background-attachment:fixed;
+	text-align: justify;
+}
+
+header{
+	width: 100%;
+	height: 100px;
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+header h1{
+	width: 250px;
+	margin: auto;
+	font-family: Arial;
+	letter-spacing: 2px;
+	color: #b5902c;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.about{
+	font-family: Arial;
+}
+
+.about span{
+	display: block;
+	width: 85%;
+	font-size: 20px;
+}
+
+.catalog{
+	margin-top: 30px;
+}
+
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+.catblock a{
+	border: 7px double #B5902C;
+	border-radius: 4px;
+	width: 47%;
+	height: 75px;
+	text-align: center;
+	text-decoration: none;
+	color: #B5902C;
+	font-family: Arial;
+}
+
+.benefits{
+	font-family: Arial;
+	display: block;
+	width: 57%;
+	font-size: 18px;
+}
+.benefits .bor{
+	border: 2px solid rgba(0,0,0,0.11);
+	padding: 8px;
+}
+
+footer{
+	font-family: Arial;
+	margin-top: 60px;
+}
+
+footer span{
+	width: 100px;
+	height: 100px;
+}
+footer div{
+	width: 30%;
+}
+footer div img{
+	height: 50px;
+	width: 50px;
+}
